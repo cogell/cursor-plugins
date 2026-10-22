@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Interrogate
 
-In Amp, read [the Amp adapter](../../docs/harness/amp.md) once per session before you follow this skill. It maps the Cursor names in pstack skills to Amp.
+In Amp, read [the Amp adapter](harness-amp.md) once per session before you follow this skill. It maps the Cursor names in pstack skills to Amp.
 
 Spawn one reviewer per configured model to adversarially review code changes. The adversarial signal comes from model diversity, not assigned personas. The deliverable is a synthesized verdict. Do NOT auto-apply changes.
 

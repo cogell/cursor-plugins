@@ -5,7 +5,7 @@ description: Configure which models pstack uses per role and at what reasoning b
 
 # Setup pstack
 
-In Amp, read [the Amp adapter](../../docs/harness/amp.md) once per session before you follow this skill. It maps the Cursor names in pstack skills to Amp.
+In Amp, read [the Amp adapter](harness-amp.md) once per session before you follow this skill. It maps the Cursor names in pstack skills to Amp.
 
 Write `~/.cursor/rules/pstack-models.mdc`, an always-applied rule that sets pstack's model per role.
 

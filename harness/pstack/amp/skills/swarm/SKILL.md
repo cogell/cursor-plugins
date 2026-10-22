@@ -6,7 +6,7 @@ disable-model-invocation: true
 
 # Swarm
 
-In Amp, read [the Amp adapter](../../docs/harness/amp.md) once per session before you follow this skill. It maps the Cursor names in pstack skills to Amp.
+In Amp, read [the Amp adapter](harness-amp.md) once per session before you follow this skill. It maps the Cursor names in pstack skills to Amp.
 
 ## Start
 
