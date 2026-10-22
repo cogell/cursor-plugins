@@ -1,6 +1,6 @@
 # pstack in Amp
 
-pstack skills use Cursor names. In Amp, read this file once per thread, then map each Cursor name in a skill with the tables below. `<pstack>` means the folder that holds `skills/` and `docs/`; the `skill` tool reports a loaded skill's base directory, two levels below it. If a Cursor field has no row, drop it and say so. Never pass a field the tool schema rejects.
+pstack skills use Cursor names. In Amp, read this file once per thread, then map each Cursor name in a skill with the tables below. In Amp each pstack skill stands alone: its folder holds this adapter as `harness-amp.md` and any agent it spawns under `agents/`. The `skill` tool reports a loaded skill's base directory; resolve a skill's relative paths from there. If a Cursor field has no row, drop it and say so. Never pass a field the tool schema rejects.
 
 Amp lists every skill to the model and does not read `disable-model-invocation`, so the Amp tree starts each such skill's description with "Run only when the user names this skill". Load one of those skills only when the user names it or another pstack skill you are following routes to it.
 
@@ -21,7 +21,7 @@ The repository's `AGENTS.md` and the user's instructions win over a pstack step 
 | Cursor | Amp |
 | --- | --- |
 | `subagent_type: generalPurpose` | `Task` with no extra fields. |
-| `poteto-agent`, `comment-sicko` | `Task` whose brief starts: "Read `<pstack>/agents/<name>.md` and follow it. poteto-mode's SKILL.md is at `<pstack>/skills/poteto-mode/SKILL.md`." Use absolute paths. |
+| `poteto-agent`, `comment-sicko` | `Task` whose brief starts: "Read `<base>/agents/<name>.md` and follow it. poteto-mode's SKILL.md is at `<poteto-mode base>/SKILL.md`." `<base>` is the base directory of the skill you are following; load `poteto-mode` with the `skill` tool to learn its base directory. Use absolute paths. |
 | `readonly: true` | `finder` for a search, `oracle` for a judgment, or `Task` whose brief says "do not edit files"; check `git status` afterward. |
 | `readonly: false` | `Task`. It keeps the thread's MCP servers. |
 | `environment: "cloud"` | `create_thread` in an orb. It starts from the default branch with none of this thread's local changes, so push a branch first and name it in the prompt. |
@@ -56,9 +56,9 @@ Follow its steps with these changes:
 | Cursor | Amp |
 | --- | --- |
 | `.cursor/skills/`, `~/.cursor/skills/` | `.agents/skills/`, `~/.config/agents/skills/` |
-| `~/.cursor/plugins/`, `.cursor-plugin/plugin.json` | `<pstack>`, wherever it was installed, and `<pstack>/plugin.json` |
+| `~/.cursor/plugins/`, `.cursor-plugin/plugin.json` | The skill's base directory. Amp has no plugin manifest for skills. |
 | `.cursor/rules/*.mdc`, always-applied rules | `AGENTS.md` in the repository. The model rule is the exception. See Models. |
-| `https://github.com/cursor/plugins/blob/main/pstack/<path>` | `<pstack>/<path>` when that file exists. The tree ships the skills, `docs/guide/`, and `README.md`. Read the local copy and never fetch it. Give the user the URL when they need a link. |
+| `https://github.com/cursor/plugins/blob/main/pstack/<path>` | For `skills/<name>/…`, load that skill with the `skill` tool and read the file from its base directory. For anything else, such as `README.md` or `docs/guide/`, read the URL, and give the user the URL when they need a link. |
 | Transcripts in `~/.cursor/projects/<slug>/agent-transcripts/` | Amp threads. Find them with `find_thread` from the `amp` module and read one with `read_thread`. They cover the user's threads on every machine, so scope a search to the repository and dates the step names. |
 
 ## Cursor-only features

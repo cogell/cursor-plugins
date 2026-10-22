@@ -11,8 +11,8 @@ const SKILLS = join(PSTACK, "skills");
 const OUT = join(ROOT, "harness", "pstack");
 // Amp lists every skill to the model and ignores `disable-model-invocation`, so its tree says so in each such description.
 const HARNESSES = [
-  { tree: "claude-code", label: "Claude Code", adapter: "docs/harness/claude-code.md", manifests: ["plugin.json", ".claude-plugin/plugin.json"], typedOnlyInDescription: false },
-  { tree: "amp", label: "Amp", adapter: "docs/harness/amp.md", manifests: ["plugin.json"], typedOnlyInDescription: true },
+  { tree: "claude-code", label: "Claude Code", adapter: "docs/harness/claude-code.md", manifests: ["plugin.json", ".claude-plugin/plugin.json"], typedOnlyInDescription: false, selfContained: false },
+  { tree: "amp", label: "Amp", adapter: "docs/harness/amp.md", manifests: ["plugin.json"], typedOnlyInDescription: true, selfContained: true },
 ];
 const GUIDE = "docs/guide";
 const COMMAND = "node scripts/generate-pstack-harness-trees.mjs";
@@ -132,7 +132,7 @@ function markTypedOnly(skill, text) {
   return text.replace(frontmatter, frontmatter.replace(field[0], `${marked}\n`).replace(/\n$/, ""));
 }
 
-function render({ label, adapter, manifests, typedOnlyInDescription }) {
+function render({ label, adapter, manifests, typedOnlyInDescription, selfContained }) {
   // Skills read the adapter, the guide, and the README at runtime, so the harness never fetches them.
   const copies = [
     ...walk(SKILLS),
@@ -164,7 +164,43 @@ function render({ label, adapter, manifests, typedOnlyInDescription }) {
     });
     entry.bytes = Buffer.from(text);
   }
+  if (selfContained) bundleIntoSkills(files, adapter);
   return files;
+}
+
+// Amp's hosted skill repositories keep each skill folder on its own, so nothing outside a skill's folder is reachable.
+// Each skill gets its own copy of the adapter and of the agents it spawns, names a sibling skill instead of linking to it,
+// and links anything else in pstack on GitHub.
+function bundleIntoSkills(files, adapter) {
+  const BUNDLED_ADAPTER = "harness-amp.md";
+  const MARKDOWN_LINK = /\[([^\]]*)\]\(([^)\s]+)\)/g;
+  for (const skill of skills) {
+    const folder = `skills/${skill}`;
+    const paths = [...files.keys()].filter((path) => path.startsWith(`${folder}/`) && path.endsWith(".md"));
+    for (const path of paths) {
+      const text = files.get(path).bytes.toString("utf8").replace(MARKDOWN_LINK, (link, label, href) => {
+        const target = href.replace(/[#?].*/, "");
+        if (!target || /^[a-z][a-z0-9+.-]*:/i.test(target)) return link;
+        const resolved = posix.join(posix.dirname(path), target).replace(/\/$/, "");
+        if (resolved === folder || resolved.startsWith(`${folder}/`)) return link;
+        if (resolved === adapter) {
+          files.set(`${folder}/${BUNDLED_ADAPTER}`, files.get(adapter));
+          return `[${label}](${posix.relative(posix.dirname(path), `${folder}/${BUNDLED_ADAPTER}`)})`;
+        }
+        const sibling = resolved.match(/^skills\/([^/]+)/)?.[1];
+        if (sibling) return label.includes(sibling) ? label : `${label} (the \`${sibling}\` skill)`;
+        const kind = existsSync(join(PSTACK, resolved)) && statSync(join(PSTACK, resolved)).isDirectory() ? "tree" : "blob";
+        return `[${label}](${GITHUB}/${kind}/main/pstack/${resolved}${href.slice(href.search(/[#?]|$/))})`;
+      });
+      files.get(path).bytes = Buffer.from(text);
+    }
+    for (const agent of readdirSync(join(PSTACK, "agents"))) {
+      const name = agent.replace(/\.md$/, "");
+      if (paths.some((path) => files.get(path).bytes.toString("utf8").includes(name))) {
+        files.set(`${folder}/agents/${agent}`, files.get(`agents/${agent}`));
+      }
+    }
+  }
 }
 
 // Each harness installs only its tree, so a relative link that works from pstack/ has to work inside the tree too.
