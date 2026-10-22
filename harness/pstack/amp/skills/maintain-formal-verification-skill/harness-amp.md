@@ -15,6 +15,11 @@ The repository's `AGENTS.md` and the user's instructions win over a pstack step 
 | Open a todolist | Use a todo tool if the thread has one. Otherwise keep the list in your reply and update it at each phase. |
 | Run another pstack skill (`/name` or "the **name** skill") | Load it with the `skill` tool by name. When you tell the user to run it, write "use the `<name>` skill" or `/<name>`. |
 | `Grep`, `Glob` | `rg` and `rg --files` through the shell, or `finder` for a search by behavior. |
+| A sibling skill at `../<name>/SKILL.md` | Load it with the `skill` tool by name; in Amp each skill is installed alone, so the relative path may not exist. In a `poteto-agent` brief, give the absolute path of the skill you are following and name the other skills to load. |
+| `deslop` (`/deslop`) from `cursor-team-kit` | The `emil-unslop-code` skill, if the thread lists it. Otherwise review the diff yourself for narrated comments, dead code, and defensive checks the types already rule out. |
+| `control-ui` from `cursor-team-kit` | `agent-browser` through the shell. Run `agent-browser skills get core --full` for its instructions, or load the `using-agent-browser` skill. |
+| `control-cli` from `cursor-team-kit` | Drive the CLI or TUI through the shell, using tmux for an interactive one. |
+| `create-skill` (`/create-skill`), Cursor's built-in | The `building-skills` skill. |
 
 ## Subagent fields
 
