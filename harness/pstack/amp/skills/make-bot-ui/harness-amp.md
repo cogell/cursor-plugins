@@ -36,6 +36,18 @@ The repository's `AGENTS.md` and the user's instructions win over a pstack step 
 | `resume` | `Task` with the earlier subagent's `id`. |
 | `file_attachments` | List the paths in the brief. |
 
+## Review and fan-out panels
+
+A skill that sends one brief to several reviewers or workers, such as `interrogate`, `swarm`, `arena`, `why`, or `reflect`, measures the difference between models, so every member must get the same text. Before you spawn any of them:
+
+1. State the intent paragraph in your reply, if the skill has one.
+2. Fill the skill's template once, with every placeholder replaced, and write it to one file, such as `.amp/in/<skill>-<topic>/brief.md`.
+3. Give each `Task` or `oracle` member that file's absolute path and tell it to follow the file exactly. Add only its label, such as "You are Reviewer B".
+4. Paste the whole filled file into the prompt of a member started with `create_thread`. It runs in another orb and cannot read this one's files. Do not summarize or shorten it.
+5. Launch all members in one message, and say in one line which model or agent mode each runs on.
+
+When a member's result comes back, check `git status` if the skill made it read-only.
+
 ## Models
 
 Amp's `Task` has no model field: every subagent runs on the thread's model. Another model is reachable two ways, both heavier than a Cursor subagent.
