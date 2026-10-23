@@ -1,6 +1,6 @@
 ---
 name: unslop
-description: "Run only when the user names this skill (/unslop). Cut AI tells from any writing."
+description: "Run only when the user asks for the unslop skill by name. Cut AI tells from any writing."
 disable-model-invocation: true
 ---
 

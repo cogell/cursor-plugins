@@ -1,6 +1,6 @@
 ---
 name: principle-laziness-protocol
-description: "Run only when the user names this skill (/principle-laziness-protocol). Apply when refactoring, evaluating diff size, or tempted to add abstractions, layers, or signal threading. Bias toward deletion and the smallest change that solves the problem."
+description: "Run only when the user asks for the principle-laziness-protocol skill by name. Apply when refactoring, evaluating diff size, or tempted to add abstractions, layers, or signal threading. Bias toward deletion and the smallest change that solves the problem."
 disable-model-invocation: true
 ---
 

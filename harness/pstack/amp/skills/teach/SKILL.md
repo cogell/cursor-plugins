@@ -1,6 +1,6 @@
 ---
 name: teach
-description: "Run only when the user names this skill (/teach). Explain a body of work plainly so a person actually understands it. Runs the `how` and `why` skills and weaves what they find into one clear explanation. Use for 'teach me this', 'help me really understand X', 'explain this change or subsystem to me'."
+description: "Run only when the user asks for the teach skill by name. Explain a body of work plainly so a person actually understands it. Runs the `how` and `why` skills and weaves what they find into one clear explanation. Use for 'teach me this', 'help me really understand X', 'explain this change or subsystem to me'."
 disable-model-invocation: true
 ---
 

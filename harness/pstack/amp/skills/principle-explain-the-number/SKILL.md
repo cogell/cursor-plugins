@@ -1,6 +1,6 @@
 ---
 name: principle-explain-the-number
-description: "Run only when the user names this skill (/principle-explain-the-number). Apply before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think."
+description: "Run only when the user asks for the principle-explain-the-number skill by name. Apply before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think."
 disable-model-invocation: true
 ---
 

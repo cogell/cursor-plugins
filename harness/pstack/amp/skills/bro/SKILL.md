@@ -1,6 +1,6 @@
 ---
 name: bro
-description: "Run only when the user names this skill (/bro). Restate the last message in plain human language, with no jargon."
+description: "Run only when the user asks for the bro skill by name. Restate the last message in plain human language, with no jargon."
 disable-model-invocation: true
 ---
 

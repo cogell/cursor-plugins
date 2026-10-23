@@ -1,6 +1,6 @@
 ---
 name: figure-it-out
-description: "Run only when the user names this skill (/figure-it-out). Design an auditable playbook when no narrower one fits: a large migration, an ambitious multi-part change, or work a human reviews after stepping away. Scales rigor to the task, runs a hypothesis loop, and logs decisions. Use for /figure-it-out or 'figure it out'."
+description: "Run only when the user asks for the figure-it-out skill by name. Design an auditable playbook when no narrower one fits: a large migration, an ambitious multi-part change, or work a human reviews after stepping away. Scales rigor to the task, runs a hypothesis loop, and logs decisions. Use for /figure-it-out or 'figure it out'."
 disable-model-invocation: true
 ---
 

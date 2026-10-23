@@ -1,6 +1,6 @@
 ---
 name: principle-migrate-callers-then-delete-legacy-apis
-description: "Run only when the user names this skill (/principle-migrate-callers-then-delete-legacy-apis). Apply when introducing a new internal API while old callers still exist. Migrate callers and delete the old API in the same wave instead of preserving compatibility layers."
+description: "Run only when the user asks for the principle-migrate-callers-then-delete-legacy-apis skill by name. Apply when introducing a new internal API while old callers still exist. Migrate callers and delete the old API in the same wave instead of preserving compatibility layers."
 disable-model-invocation: true
 ---
 

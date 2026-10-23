@@ -1,6 +1,6 @@
 ---
 name: principle-boundary-discipline
-description: "Run only when the user names this skill (/principle-boundary-discipline). Apply when wiring validation, error handling, or framework adapters. Concentrate guards at system boundaries (CLI, config, network, external APIs); trust internal types and keep business logic in pure functions."
+description: "Run only when the user asks for the principle-boundary-discipline skill by name. Apply when wiring validation, error handling, or framework adapters. Concentrate guards at system boundaries (CLI, config, network, external APIs); trust internal types and keep business logic in pure functions."
 disable-model-invocation: true
 ---
 

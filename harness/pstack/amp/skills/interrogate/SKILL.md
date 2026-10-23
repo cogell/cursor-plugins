@@ -1,6 +1,6 @@
 ---
 name: interrogate
-description: "Run only when the user names this skill (/interrogate). Use for \"interrogate\", \"adversarial review\", \"multi-model review\", \"challenge this\", \"stress test this code\", \"find blind spots\", or \"tear this apart\". Multiple LLM reviewers challenge changes from independent angles."
+description: "Run only when the user asks for the interrogate skill by name. Use for \"interrogate\", \"adversarial review\", \"multi-model review\", \"challenge this\", \"stress test this code\", \"find blind spots\", or \"tear this apart\". Multiple LLM reviewers challenge changes from independent angles."
 disable-model-invocation: true
 ---
 

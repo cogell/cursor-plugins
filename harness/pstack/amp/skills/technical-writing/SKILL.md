@@ -1,6 +1,6 @@
 ---
 name: technical-writing
-description: "Run only when the user names this skill (/technical-writing). Layered technical-writing standard: Diátaxis structure, Google developer style sentences, STE instruction rules, Global English syntax. Use for /technical-writing or when writing or reviewing docs, RFCs, readmes, PR descriptions, or commit messages."
+description: "Run only when the user asks for the technical-writing skill by name. Layered technical-writing standard: Diátaxis structure, Google developer style sentences, STE instruction rules, Global English syntax. Use for /technical-writing or when writing or reviewing docs, RFCs, readmes, PR descriptions, or commit messages."
 disable-model-invocation: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: reflect
-description: "Run only when the user names this skill (/reflect). Spawn three parallel review subagents over the active transcript, surface learnings, and route each to a concrete edit on an existing skill. Use when the user says reflect."
+description: "Run only when the user asks for the reflect skill by name. Spawn three parallel review subagents over the active transcript, surface learnings, and route each to a concrete edit on an existing skill. Use when the user says reflect."
 disable-model-invocation: true
 ---
 

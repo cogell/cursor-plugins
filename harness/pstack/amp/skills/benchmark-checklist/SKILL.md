@@ -1,6 +1,6 @@
 ---
 name: benchmark-checklist
-description: "Run only when the user names this skill (/benchmark-checklist). Vet a perf measurement (limiter, tuning, limits, errors, repeatability, relevance, and whether the work happened) before you report or act on it. Use when you run a benchmark or report a speedup or regression you measured."
+description: "Run only when the user asks for the benchmark-checklist skill by name. Vet a perf measurement (limiter, tuning, limits, errors, repeatability, relevance, and whether the work happened) before you report or act on it. Use when you run a benchmark or report a speedup or regression you measured."
 disable-model-invocation: true
 ---
 

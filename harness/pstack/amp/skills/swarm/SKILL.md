@@ -1,6 +1,6 @@
 ---
 name: swarm
-description: "Run only when the user names this skill (/swarm). Fan out N parallel workers, drain them, and return one report. Use for /swarm, 'swarm this', or parallel coverage, races, gauntlets, and exploration."
+description: "Run only when the user asks for the swarm skill by name. Fan out N parallel workers, drain them, and return one report. Use for /swarm, 'swarm this', or parallel coverage, races, gauntlets, and exploration."
 disable-model-invocation: true
 ---
 

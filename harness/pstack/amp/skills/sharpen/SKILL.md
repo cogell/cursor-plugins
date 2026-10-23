@@ -1,6 +1,6 @@
 ---
 name: sharpen
-description: "Run only when the user names this skill (/sharpen). Make a task deeper, not bigger, then rewrite the prompt. Use for /sharpen."
+description: "Run only when the user asks for the sharpen skill by name. Make a task deeper, not bigger, then rewrite the prompt. Use for /sharpen."
 disable-model-invocation: true
 ---
 

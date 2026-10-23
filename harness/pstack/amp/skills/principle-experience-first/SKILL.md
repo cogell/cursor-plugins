@@ -1,6 +1,6 @@
 ---
 name: principle-experience-first
-description: "Run only when the user names this skill (/principle-experience-first). Apply when product, UX, or feature-scope tradeoffs come up. Choose user delight over implementation convenience; ship fewer polished features over more rough ones."
+description: "Run only when the user asks for the principle-experience-first skill by name. Apply when product, UX, or feature-scope tradeoffs come up. Choose user delight over implementation convenience; ship fewer polished features over more rough ones."
 disable-model-invocation: true
 ---
 

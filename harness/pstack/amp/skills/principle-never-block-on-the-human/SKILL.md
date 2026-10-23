@@ -1,6 +1,6 @@
 ---
 name: principle-never-block-on-the-human
-description: "Run only when the user names this skill (/principle-never-block-on-the-human). Apply when tempted to ask 'should I do X?' on reversible work."
+description: "Run only when the user asks for the principle-never-block-on-the-human skill by name. Apply when tempted to ask 'should I do X?' on reversible work."
 disable-model-invocation: true
 ---
 

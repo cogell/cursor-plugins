@@ -1,6 +1,6 @@
 ---
 name: principle-attack-the-premise
-description: "Run only when the user names this skill (/principle-attack-the-premise). Apply when two or more fixes that share one premise have failed the same gate. Write the premise down and test it directly before you write another fix that assumes it."
+description: "Run only when the user asks for the principle-attack-the-premise skill by name. Apply when two or more fixes that share one premise have failed the same gate. Write the premise down and test it directly before you write another fix that assumes it."
 disable-model-invocation: true
 ---
 
