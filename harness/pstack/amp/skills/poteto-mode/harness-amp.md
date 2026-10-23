@@ -2,7 +2,7 @@
 
 pstack skills use Cursor names. In Amp, read this file once per thread, then map each Cursor name in a skill with the tables below. In Amp each pstack skill stands alone: its folder holds this adapter as `harness-amp.md` and any agent it spawns under `agents/`. The `skill` tool reports a loaded skill's base directory; resolve a skill's relative paths from there. If a Cursor field has no row, drop it and say so. Never pass a field the tool schema rejects.
 
-Amp lists every skill to the model and does not read `disable-model-invocation`, so the Amp tree starts each such skill's description with "Run only when the user names this skill". Load one of those skills only when the user names it or another pstack skill you are following routes to it.
+Amp lists every skill to the model and does not read `disable-model-invocation`, so the Amp tree starts each such skill's description with "Run only when the user asks for the <name> skill by name". Load one of those skills only when the user names it, with or without a leading slash, or another pstack skill you are following routes to it.
 
 The repository's `AGENTS.md` and the user's instructions win over a pstack step that contradicts them, such as a rule on migrations, on asking before acting, or on how a pull request is opened and reviewed. A pstack skill the user invoked is an explicit request to work its way, so follow its delegation and review steps even where Amp's defaults would do the work in the current thread.
 
@@ -13,7 +13,7 @@ The repository's `AGENTS.md` and the user's instructions win over a pstack step 
 | `Task` | `Task`. Its subagent sees no skill catalog of its own choosing, so name the skill files it must read in the brief. |
 | `AskQuestion` | Ask in plain text. Use `ask_user_choice` only when the user asked to be asked questions. |
 | Open a todolist | Use a todo tool if the thread has one. Otherwise keep the list in your reply and update it at each phase. |
-| Run another pstack skill (`/name` or "the **name** skill") | Load it with the `skill` tool by name. When you tell the user to run it, write "use the `<name>` skill" or `/<name>`. |
+| Run another pstack skill (`/name` or "the **name** skill") | Load it with the `skill` tool by name. When you tell the user to run it, write "use the `<name>` skill". A leading slash is not a command in Amp, so never present `/<name>` as the way to run it. |
 | `Grep`, `Glob` | `rg` and `rg --files` through the shell, or `finder` for a search by behavior. |
 | A sibling skill at `../<name>/SKILL.md` | Load it with the `skill` tool by name; in Amp each skill is installed alone, so the relative path may not exist. In a `poteto-agent` brief, give the absolute path of the skill you are following and name the other skills to load. |
 | `deslop` (`/deslop`) from `cursor-team-kit` | The `emil-unslop-code` skill, if the thread lists it. Otherwise review the diff yourself for narrated comments, dead code, and defensive checks the types already rule out. |

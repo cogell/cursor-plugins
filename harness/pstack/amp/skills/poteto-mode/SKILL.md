@@ -1,6 +1,6 @@
 ---
 name: poteto-mode
-description: "Run only when the user names this skill (/poteto-mode). poteto's agent style for concise, detailed responses, deliberate subagents, unslopped prose, simple code, and verified work. Use for poteto, /poteto-mode, or requests to work in this style."
+description: "Run only when the user asks for the poteto-mode skill by name. poteto's agent style for concise, detailed responses, deliberate subagents, unslopped prose, simple code, and verified work. Use for poteto, /poteto-mode, or requests to work in this style."
 disable-model-invocation: true
 icon: crown
 color: yellow

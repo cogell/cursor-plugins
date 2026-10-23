@@ -1,6 +1,6 @@
 ---
 name: no-comments
-description: "Run only when the user names this skill (/no-comments). Spawn Comment Sicko, fix accepted findings, and offer encodings for claimed constraints."
+description: "Run only when the user asks for the no-comments skill by name. Spawn Comment Sicko, fix accepted findings, and offer encodings for claimed constraints."
 disable-model-invocation: true
 ---
 

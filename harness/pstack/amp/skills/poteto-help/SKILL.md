@@ -1,6 +1,6 @@
 ---
 name: poteto-help
-description: "Run only when the user names this skill (/poteto-help). Guides users through pstack setup, /poteto-mode, and picking the skill, playbook, or principle for a task. Type /poteto-help with a question."
+description: "Run only when the user asks for the poteto-help skill by name. Guides users through pstack setup, /poteto-mode, and picking the skill, playbook, or principle for a task. Type /poteto-help with a question."
 disable-model-invocation: true
 ---
 

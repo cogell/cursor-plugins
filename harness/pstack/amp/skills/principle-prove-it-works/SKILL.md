@@ -1,6 +1,6 @@
 ---
 name: principle-prove-it-works
-description: "Run only when the user names this skill (/principle-prove-it-works). Apply after completing a task, before declaring done. Verify against the real artifact (run the feature, read the actual value, inspect the diff), not a proxy, self-report, or 'it compiles.'"
+description: "Run only when the user asks for the principle-prove-it-works skill by name. Apply after completing a task, before declaring done. Verify against the real artifact (run the feature, read the actual value, inspect the diff), not a proxy, self-report, or 'it compiles.'"
 disable-model-invocation: true
 ---
 

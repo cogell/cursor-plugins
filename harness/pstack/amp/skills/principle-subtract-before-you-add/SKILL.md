@@ -1,6 +1,6 @@
 ---
 name: principle-subtract-before-you-add
-description: "Run only when the user names this skill (/principle-subtract-before-you-add). Apply when sequencing an addition, refactor, or rewrite. Remove dead code, redundant validators, and stub references first, then build on the simpler base."
+description: "Run only when the user asks for the principle-subtract-before-you-add skill by name. Apply when sequencing an addition, refactor, or rewrite. Remove dead code, redundant validators, and stub references first, then build on the simpler base."
 disable-model-invocation: true
 ---
 

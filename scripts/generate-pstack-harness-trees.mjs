@@ -128,7 +128,7 @@ function markTypedOnly(skill, text) {
   const description = /^[>|]/.test(head)
     ? rest.split("\n").map((line) => line.trim()).filter(Boolean).join(" ")
     : head.startsWith('"') ? JSON.parse(head) : head.replace(/^'(.*)'$/, "$1").replace(/''/g, "'");
-  const marked = `description: ${JSON.stringify(`Run only when the user names this skill (/${skill}). ${description}`)}`;
+  const marked = `description: ${JSON.stringify(`Run only when the user asks for the ${skill} skill by name. ${description}`)}`;
   return text.replace(frontmatter, frontmatter.replace(field[0], `${marked}\n`).replace(/\n$/, ""));
 }
 

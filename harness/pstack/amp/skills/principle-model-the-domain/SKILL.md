@@ -1,6 +1,6 @@
 ---
 name: principle-model-the-domain
-description: "Run only when the user names this skill (/principle-model-the-domain). Apply when writing stateful logic, or when code branches a lot or repeats a shape assumption across files."
+description: "Run only when the user asks for the principle-model-the-domain skill by name. Apply when writing stateful logic, or when code branches a lot or repeats a shape assumption across files."
 disable-model-invocation: true
 ---
 

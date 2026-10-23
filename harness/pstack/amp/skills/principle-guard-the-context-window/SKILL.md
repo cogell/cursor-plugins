@@ -1,6 +1,6 @@
 ---
 name: principle-guard-the-context-window
-description: "Run only when the user names this skill (/principle-guard-the-context-window). Apply when context is filling up: large outputs, long files, repeated reads, fan-out planning. Route bulk to subagents; keep summaries in the main thread, not raw payloads."
+description: "Run only when the user asks for the principle-guard-the-context-window skill by name. Apply when context is filling up: large outputs, long files, repeated reads, fan-out planning. Route bulk to subagents; keep summaries in the main thread, not raw payloads."
 disable-model-invocation: true
 ---
 

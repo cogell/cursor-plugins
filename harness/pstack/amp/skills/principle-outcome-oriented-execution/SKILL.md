@@ -1,6 +1,6 @@
 ---
 name: principle-outcome-oriented-execution
-description: "Run only when the user names this skill (/principle-outcome-oriented-execution). Apply during planned rewrites and migrations with explicit phase boundaries. Converge on the target architecture; don't preserve smooth intermediate states with throwaway compatibility code."
+description: "Run only when the user asks for the principle-outcome-oriented-execution skill by name. Apply during planned rewrites and migrations with explicit phase boundaries. Converge on the target architecture; don't preserve smooth intermediate states with throwaway compatibility code."
 disable-model-invocation: true
 ---
 

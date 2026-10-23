@@ -1,6 +1,6 @@
 ---
 name: typescript-best-practices
-description: "Run only when the user names this skill (/typescript-best-practices). TypeScript best practices. Use when reading or editing any .ts or .tsx file."
+description: "Run only when the user asks for the typescript-best-practices skill by name. TypeScript best practices. Use when reading or editing any .ts or .tsx file."
 paths: ["**/*.ts", "**/*.tsx"]
 disable-model-invocation: true
 ---

@@ -1,6 +1,6 @@
 ---
 name: principle-sequence-verifiable-units
-description: "Run only when the user names this skill (/principle-sequence-verifiable-units). Apply to multi-step work (sweeps, migrations, runs of similar edits) and to how you stack commits and PRs. Break work into small units that each end in a verifiable state, check each before the next, and order delivery so the sequence proves itself to a reviewer."
+description: "Run only when the user asks for the principle-sequence-verifiable-units skill by name. Apply to multi-step work (sweeps, migrations, runs of similar edits) and to how you stack commits and PRs. Break work into small units that each end in a verifiable state, check each before the next, and order delivery so the sequence proves itself to a reviewer."
 disable-model-invocation: true
 ---
 

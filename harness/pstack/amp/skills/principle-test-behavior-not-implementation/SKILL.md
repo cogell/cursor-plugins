@@ -1,6 +1,6 @@
 ---
 name: principle-test-behavior-not-implementation
-description: "Run only when the user names this skill (/principle-test-behavior-not-implementation). Apply when you write, change, or keep a test. Assert what the code's users can observe, so that the test fails when that behavior breaks and keeps passing when only the internals change."
+description: "Run only when the user asks for the principle-test-behavior-not-implementation skill by name. Apply when you write, change, or keep a test. Assert what the code's users can observe, so that the test fails when that behavior breaks and keeps passing when only the internals change."
 disable-model-invocation: true
 ---
 

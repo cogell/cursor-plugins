@@ -1,6 +1,6 @@
 ---
 name: principle-encode-lessons-in-structure
-description: "Run only when the user names this skill (/principle-encode-lessons-in-structure). Apply when you catch yourself writing the same instruction a second time, or notice a recurring correction. Encode the rule as a lint, metadata flag, runtime check, or script instead of more text."
+description: "Run only when the user asks for the principle-encode-lessons-in-structure skill by name. Apply when you catch yourself writing the same instruction a second time, or notice a recurring correction. Encode the rule as a lint, metadata flag, runtime check, or script instead of more text."
 disable-model-invocation: true
 ---
 

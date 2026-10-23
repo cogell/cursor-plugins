@@ -1,6 +1,6 @@
 ---
 name: create-verification-skill
-description: "Run only when the user names this skill (/create-verification-skill). Generate a project-local verification skill that drives your app the way a user does — any language, framework, or platform. Use for /create-verification-skill, \"make a control skill for this repo\", or when a project has no scripted way to prove UI/CLI/service behavior."
+description: "Run only when the user asks for the create-verification-skill skill by name. Generate a project-local verification skill that drives your app the way a user does — any language, framework, or platform. Use for /create-verification-skill, \"make a control skill for this repo\", or when a project has no scripted way to prove UI/CLI/service behavior."
 disable-model-invocation: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: principle-make-operations-idempotent
-description: "Run only when the user names this skill (/principle-make-operations-idempotent). Apply when designing commands, lifecycle steps, or processing loops that run amid crashes, restarts, and retries. Converge to the same end state regardless of partial prior runs."
+description: "Run only when the user asks for the principle-make-operations-idempotent skill by name. Apply when designing commands, lifecycle steps, or processing loops that run amid crashes, restarts, and retries. Converge to the same end state regardless of partial prior runs."
 disable-model-invocation: true
 ---
 

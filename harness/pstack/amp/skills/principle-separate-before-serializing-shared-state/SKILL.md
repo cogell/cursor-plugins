@@ -1,6 +1,6 @@
 ---
 name: principle-separate-before-serializing-shared-state
-description: "Run only when the user names this skill (/principle-separate-before-serializing-shared-state). Apply when concurrent actors might write to the same file, branch, key, or state object. Eliminate the sharing first; serialize structurally only when one shared writer is a real invariant."
+description: "Run only when the user asks for the principle-separate-before-serializing-shared-state skill by name. Apply when concurrent actors might write to the same file, branch, key, or state object. Eliminate the sharing first; serialize structurally only when one shared writer is a real invariant."
 disable-model-invocation: true
 ---
 

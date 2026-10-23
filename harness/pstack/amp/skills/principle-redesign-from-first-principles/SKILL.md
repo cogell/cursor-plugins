@@ -1,6 +1,6 @@
 ---
 name: principle-redesign-from-first-principles
-description: "Run only when the user names this skill (/principle-redesign-from-first-principles). Apply when integrating a new requirement into an existing design."
+description: "Run only when the user asks for the principle-redesign-from-first-principles skill by name. Apply when integrating a new requirement into an existing design."
 disable-model-invocation: true
 ---
 
