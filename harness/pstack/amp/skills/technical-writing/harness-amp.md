@@ -27,6 +27,7 @@ The repository's `AGENTS.md` and the user's instructions win over a pstack step 
 | --- | --- |
 | `subagent_type: generalPurpose` | `Task` with no extra fields. |
 | `poteto-agent`, `comment-sicko` | `Task` whose brief starts: "Read `<base>/agents/<name>.md` and follow it. poteto-mode's SKILL.md is at `<poteto-mode base>/SKILL.md`." `<base>` is the base directory of the skill you are following; load `poteto-mode` with the `skill` tool to learn its base directory. Use absolute paths. |
+| The `model:` line in `poteto-agent`'s file | It holds a Cursor slug. `Task` has no model field, so ignore the line; the delegate runs on the thread's model. |
 | `readonly: true` | `finder` for a search, `oracle` for a judgment, or `Task` whose brief says "do not edit files"; check `git status` afterward. |
 | `readonly: false` | `Task`. It keeps the thread's MCP servers. |
 | `environment: "cloud"` | `create_thread` in an orb. It starts from the default branch with none of this thread's local changes, so push a branch first and name it in the prompt. |
@@ -54,8 +55,8 @@ Amp's `Task` has no model field: every subagent runs on the thread's model. Anot
 
 | Cursor | Amp |
 | --- | --- |
-| A `claude-*`, `grok-*`, or `gpt-*` slug for a code delegate, such as `grok-4.7-xhigh-fast` | `Task`, on the thread's model. Say so in one line. |
-| A slug for one lens of a review or judgment panel | Run one lens in `oracle`, a stronger reasoning model, and the rest as `Task` subagents. For a lens that must run on a named family, use `create_thread` with `intent: "independent-review"` and an `agent_mode` from `list_agent_modes` that matches it (for example `grok47-high` for `grok-*`, `gpt56s` for `gpt-*`, `claude-opus-5-5` for `claude-opus-*`), after pushing the branch it reviews. |
+| A `claude-*`, `gemini-*`, or other slug for a code delegate, such as `claude-opus-5-5-xhigh-fast` | `Task`, on the thread's model. Say so in one line. |
+| A slug for one lens of a review or judgment panel | Run one lens in `oracle`, a stronger reasoning model, and the rest as `Task` subagents. For a lens that must run on a named family, use `create_thread` with `intent: "independent-review"` and a `model` that matches it (for example `google-vertex/gemini-4-neon` for `gemini-4-neon-*`, `anthropic/claude-fable-5-2` for `claude-fable-*`, `anthropic/claude-opus-5-5` for `claude-opus-*`), after pushing the branch it reviews. The `create_thread` tool lists the models it accepts. |
 | `auto` or `inherit-parent` | `Task`. |
 | The `pstack-models.mdc` rule, `~/.cursor/rules/pstack-models.mdc` | `~/.config/amp/pstack-models.md`. Amp does not load it on its own, so read it when a step needs a role's model. If the file or the role's line is missing, use the mapping above for the skill's default slug. |
 | A role value | `task`, `oracle`, or an Amp agent mode key, as written by setup-pstack below. |
